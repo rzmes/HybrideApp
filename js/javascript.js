@@ -10,6 +10,24 @@ function functionPage1() {
 }
 
 function functionPage2() {
+    var w1 = Number.parseInt(document.getElementById("w1").value);
+    var w2 = Number.parseInt(document.getElementById("w2").value);
+    var w3 = Number.parseInt(document.getElementById("w3").value);
+
+    if (isNaN(w1)) {
+        w1 = 0;
+    };
+    if (isNaN(w2)) {
+        w2 = 0;
+    };
+    if (isNaN(w3)) {
+        w3 = 0;
+    };
+
+    var result = w1 + w2 + w3;
+
+    document.getElementById('result').innerHTML = result;
+
     var page1 = document.getElementById("page1");
     page1.className = "";
 

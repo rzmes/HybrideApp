@@ -10,22 +10,28 @@
     <body>
         <div data-role="page" id="page1" class="active">
 
-            <!--get element by id
-            //remove attribute
-            //add attribute
-            //Css zwei definitionen [visible, invisible]
-            // erstmal alle Pages prinzipiell invisible, dann je nach bedarf "visible" setzen. -->
-    
             <div data-role="header">
-                <h1>My Title1</h1>
+                <h1>Inputdaten</h1>
             </div><!-- /header -->
     
             <div role="main" class="ui-content">
-                <p>Hello world</p>
+                <form>
+                    <label for="Wert1">Wert1:
+                        <input id="w1" name="w1">
+                    </label>
+                    <br>
+                    <label for="Wert2">Wert2: 
+                        <input id="w2" name="w2">
+                    </label>
+                    <br>
+                    <label for="Wert3">Wert3: 
+                        <input id="w3" name="w3">
+                    </label>
+                </form>
             </div><!-- /content -->
     
             <div data-role="footer">
-                <h4>My Footer</h4>
+                <h4>Buttons</h4>
                 <button id="buttonpage1" onclick="functionPage2()">Page 2</button>
                 <button id="buttonpage1" onclick="functionPage3()">Page 3</button>
             </div><!-- /footer -->
@@ -35,15 +41,15 @@
         <div data-role="page" id="page2" class="">
             
             <div data-role="header">
-                <h1>My Title2</h1>
+                <h1>Ergebnis</h1>
             </div><!-- /header -->
 
             <div role="main" class="ui-content">
-                <p>Hello world</p>
+                <p id='result'></p>
             </div><!-- /content -->
 
             <div data-role="footer">
-                <h4>My Footer</h4>
+                <h4>Buttons</h4>
                 <button id="buttonpage1" onclick="functionPage1()">Page 1</button>
                 <button id="buttonpage1" onclick="functionPage3()">Page 3</button>
             </div><!-- /footer -->
@@ -53,15 +59,15 @@
         <div data-role="page" id="page3" class="">
         
             <div data-role="header">
-                <h1>My Title3</h1>
+                <h1>Hinweise</h1>
             </div><!-- /header -->
 
             <div role="main" class="ui-content">
-                <p>Hello world</p>
+                <p>Beschreibung wie die App funktioniert</p>
             </div><!-- /content -->
 
             <div data-role="footer">
-                <h4>My Footer</h4>
+                <h4>Buttons</h4>
                 <button id="buttonpage1" onclick="functionPage1()">Page 1</button>
                 <button id="buttonpage1" onclick="functionPage2()">Page 2</button>
             </div><!-- /footer -->
