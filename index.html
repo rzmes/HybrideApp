@@ -8,7 +8,7 @@
     </head>
 
     <body>
-        <div data-role="page" class="active">
+        <div data-role="page" id="page1" class="active">
 
             <!--get element by id
             //remove attribute
@@ -26,12 +26,13 @@
     
             <div data-role="footer">
                 <h4>My Footer</h4>
-                <button id="buttonpage1" >Page 2</button>
+                <button id="buttonpage1" onclick="functionPage2()">Page 2</button>
+                <button id="buttonpage1" onclick="functionPage3()">Page 3</button>
             </div><!-- /footer -->
     
         </div><!-- /page -->
 
-        <div data-role="page">
+        <div data-role="page" id="page2" class="">
             
             <div data-role="header">
                 <h1>My Title2</h1>
@@ -43,11 +44,13 @@
 
             <div data-role="footer">
                 <h4>My Footer</h4>
+                <button id="buttonpage1" onclick="functionPage1()">Page 1</button>
+                <button id="buttonpage1" onclick="functionPage3()">Page 3</button>
             </div><!-- /footer -->
 
         </div><!-- /page -->
 
-        <div data-role="page">
+        <div data-role="page" id="page3" class="">
         
             <div data-role="header">
                 <h1>My Title3</h1>
@@ -59,6 +62,8 @@
 
             <div data-role="footer">
                 <h4>My Footer</h4>
+                <button id="buttonpage1" onclick="functionPage1()">Page 1</button>
+                <button id="buttonpage1" onclick="functionPage2()">Page 2</button>
             </div><!-- /footer -->
 
         </div><!-- /page -->
