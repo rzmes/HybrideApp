@@ -3,13 +3,18 @@
     <head>
         <title>My Page</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/jquery/jquery.mobile-1.4.5.min.css">
-        <script src="/jquery/jquery-3.2.1.min.js"></script>
-        <script src="/jquery/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="jquery/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="css/stylesheet.css">
     </head>
 
     <body>
-        <div data-role="page">
+        <div data-role="page" class="active">
+
+            <!--get element by id
+            //remove attribute
+            //add attribute
+            //Css zwei definitionen [visible, invisible]
+            // erstmal alle Pages prinzipiell invisible, dann je nach bedarf "visible" setzen. -->
     
             <div data-role="header">
                 <h1>My Title1</h1>
@@ -21,6 +26,7 @@
     
             <div data-role="footer">
                 <h4>My Footer</h4>
+                <button id="buttonpage1" >Page 2</button>
             </div><!-- /footer -->
     
         </div><!-- /page -->
@@ -56,5 +62,9 @@
             </div><!-- /footer -->
 
         </div><!-- /page -->
+
+        <script src="jquery/jquery-3.2.1.min.js"></script>
+        <script src="jquery/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/javascript.js"></script>
     </body>
 </html>

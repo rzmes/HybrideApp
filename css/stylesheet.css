@@ -1,0 +1,9 @@
+div[data-role="page"] {
+    display: none;
+    visibility: hidden;
+}
+
+div[data-role="page"].active {
+    display: block;
+    visibility: visible;
+}
