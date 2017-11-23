@@ -1,13 +1,16 @@
 <!doctype html>
 <html>
     <head>
-        <title>My Page</title>
+        <title>Absatzrechner</title>
+        <!-- Parameter festlegt -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Einbinden der CSS Dateien -->
         <link rel="stylesheet" href="jquery/jquery.mobile-1.4.5.min.css">
         <link rel="stylesheet" href="css/stylesheet.css">
     </head>
 
     <body>
+        <!-- Start /Seite 1 -->
         <div data-role="page" id="page1" class="active">
 
             <div data-role="header">
@@ -16,16 +19,41 @@
     
             <div role="main" class="ui-content">
                 <form>
-                    <label for="Wert1">Wert1:
-                        <input id="w1" name="w1">
+                    <label for="Wert1">Schuhgröße:
+                        <input id="s" name="w1">
                     </label>
                     <br>
-                    <label for="Wert2">Wert2: 
-                        <input id="w2" name="w2">
+                    <label for="Wert2">Eindruck:
+                        <input id="p" name="w2"> (0.0 - 1)
                     </label>
                     <br>
-                    <label for="Wert3">Wert3: 
-                        <input id="w3" name="w3">
+                    <label for="Wert3">Erfahrung: 
+                        <input id="y" name="w3"> in Jahre
+                    </label>
+                    <br>
+                    <label for="Wert4">Kaufpreis: 
+                        <input id="l" name="w3"> in €
+                    </label>
+                    <br>
+                    <label for="Wert5">Wie lange modisch? 
+                        <input id="t" name="w3"> in Monate
+                    </label>
+                    <br>
+                    <!--
+                    <label for="Wert6">Alkohlkonsum: 
+                        <input id="a" name="w3">
+                    </label>
+                    -->
+                    <label for="Wert6">Alkohlkonsum: 
+                        <select id="alkohol">
+                            <option value="null"></option>
+                            <option value="0">Alko...was?!</option>
+                            <option value="20">Ich muss leider noch fahren</option>
+                            <option value="40">Ein Prosecco geht immer!</option>
+                            <option value="60">Aperol Spritz geht immer!</option>
+                            <option value="80">Ich trink sie alle schön!</option>
+                            <option value="100">Ich baller mir die Scheuerleiste weg!</option>
+                        </select>
                     </label>
                 </form>
             </div><!-- /content -->
@@ -36,8 +64,12 @@
                 <button id="buttonpage1" onclick="functionPage3()">Page 3</button>
             </div><!-- /footer -->
     
-        </div><!-- /page -->
+        </div>
+        <!-- Ende /Seite 1 -->
 
+
+
+        <!-- Start /Seite 2 -->
         <div data-role="page" id="page2" class="">
             
             <div data-role="header">
@@ -54,8 +86,12 @@
                 <button id="buttonpage1" onclick="functionPage3()">Page 3</button>
             </div><!-- /footer -->
 
-        </div><!-- /page -->
+        </div>
+        <!-- Ende /Seite 2 -->
 
+
+
+        <!-- Start /Seite 3 -->
         <div data-role="page" id="page3" class="">
         
             <div data-role="header">
@@ -72,8 +108,12 @@
                 <button id="buttonpage1" onclick="functionPage2()">Page 2</button>
             </div><!-- /footer -->
 
-        </div><!-- /page -->
+        </div>
+        <!-- Ende /Seite 3 -->
 
+
+
+        <!-- Einbinden der JS-Dateien -->
         <script src="jquery/jquery-3.2.1.min.js"></script>
         <script src="jquery/jquery.mobile-1.4.5.min.js"></script>
         <script src="js/javascript.js"></script>

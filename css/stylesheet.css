@@ -1,8 +1,11 @@
+
+/* Seiten initial unsichtbar machen und auch den Platz freigeben */
 div[data-role="page"] {
     display: none;
     visibility: hidden;
 }
 
+/* Seite sichtbar machen */
 div[data-role="page"].active {
     display: block;
     visibility: visible;
