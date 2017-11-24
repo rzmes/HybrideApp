@@ -11,6 +11,7 @@ function functionPage1() {
 }
 
 function functionPage2() {
+    alert(document.getElementById("p").value);
     // Umrechnungskurs 1€ = xx Pfund
     var kurs = 0.89;
 
