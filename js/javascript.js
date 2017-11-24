@@ -11,7 +11,7 @@ function functionPage1() {
 }
 
 function functionPage2() {
-    // Umrechnungskurs 1€ = xx Pfund test
+    // Umrechnungskurs 1€ = xx Pfund
     var kurs = 0.89;
 
     // Alle Eingaben holen
