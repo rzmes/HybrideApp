@@ -16,7 +16,7 @@ function functionPage2() {
 
     // Alle Eingaben holen
     var s = Number.parseInt(document.getElementById("s").value);
-    var p = Number.parseInt(document.getElementById("p").value);
+    var p = Number.parseFloat(document.getElementById("p").value);
     var y = Number.parseInt(document.getElementById("y").value);
     var l = Number.parseInt(document.getElementById("l").value * kurs);
     var t = Number.parseInt(document.getElementById("t").value);
