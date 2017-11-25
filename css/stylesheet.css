@@ -1,3 +1,7 @@
+/* Schriftart */
+body {
+    font-family: 'Roboto';
+  }  
 
 /* Seiten initial unsichtbar machen und auch den Platz freigeben */
 div[data-role="page"] {

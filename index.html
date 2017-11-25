@@ -6,15 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">  
         <!-- Einbinden der CSS Dateien -->
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"> 
         <link rel="stylesheet" href="jquery/jquery.mobile-1.4.5.min.css">
         <link rel="stylesheet" href="css/stylesheet.css">
-
-        <style>
-            body {
-              font-family: 'Roboto';
-            }  
-        </style>
     </head>
 
     <body>
@@ -28,11 +22,18 @@
             <div role="main" class="ui-content">
                 <form>
                     <label for="Wert1">Schuhgröße:
-                        <input id="s" name="w1">
+                        <input type="text" data-clear-btn="true" id="s" name="w1">
                     </label>
                     <br>
                     <label for="Wert2">Eindruck:
-                        <input id="p" type="range" min="0.0" max="1" step="0.1">
+                        <br>
+                        <form>
+                            <input type="range" name="slider-fill" data-highlight="true" id="p" min="0.0" max="1" value="0" step="0.1">
+                        </form>
+                        <form>
+                            <label for="slider-2">Slider (default is "false"):</label>
+                            <input type="range" name="slider-2" id="slider-2" data-highlight="true" min="0" max="100" value="50">
+                        </form>
                     </label>
                     <br>
                     <label for="Wert3">Erfahrung: 
