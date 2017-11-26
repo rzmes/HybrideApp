@@ -30,22 +30,18 @@
                         <form>
                             <input type="range" name="slider-fill" data-highlight="true" id="p" min="0.0" max="1" value="0" step="0.1">
                         </form>
-                        <form>
-                            <label for="slider-2">Slider (default is "false"):</label>
-                            <input type="range" name="slider-2" id="slider-2" data-highlight="true" min="0" max="100" value="50">
-                        </form>
                     </label>
                     <br>
                     <label for="Wert3">Erfahrung: 
-                        <input id="y" name="w3"> in Jahre
+                        <input id="y" data-clear-btn="true" name="w3"> in Jahre
                     </label>
                     <br>
                     <label for="Wert4">Kaufpreis: 
-                        <input id="l" name="w3"> in €
+                        <input id="l" data-clear-btn="true" name="w3"> in €
                     </label>
                     <br>
                     <label for="Wert5">Wie lange modisch? 
-                        <input id="t" name="w3"> in Monate
+                        <input id="t" data-clear-btn="true" name="w3"> in Monate
                     </label>
                     <br>
                     <!--
@@ -69,8 +65,8 @@
     
             <div data-role="footer">
                 <h4>Buttons</h4>
-                <button id="buttonpage1" onclick="functionPage2()">Page 2</button>
-                <button id="buttonpage1" onclick="functionPage3()">Page 3</button>
+                <button id="buttonpage1" onclick="functionPage2()">Berechnen</button>
+                <button id="buttonpage1" onclick="functionPage3()">Hinweis zur Nutzung</button>
             </div><!-- /footer -->
     
         </div>
@@ -91,8 +87,8 @@
 
             <div data-role="footer">
                 <h4>Buttons</h4>
-                <button id="buttonpage1" onclick="functionPage1()">Page 1</button>
-                <button id="buttonpage1" onclick="functionPage3()">Page 3</button>
+                <button id="buttonpage1" onclick="functionPage1()">zu den Eingaben</button>
+                <button id="buttonpage1" onclick="functionPage3()">Hinweis zur Nutzung</button>
             </div><!-- /footer -->
 
         </div>
@@ -113,8 +109,8 @@
 
             <div data-role="footer">
                 <h4>Buttons</h4>
-                <button id="buttonpage1" onclick="functionPage1()">Page 1</button>
-                <button id="buttonpage1" onclick="functionPage2()">Page 2</button>
+                <button id="buttonpage1" onclick="functionPage1()">Zu den Eingaben</button>
+                <button id="buttonpage1" onclick="functionPage2()">Zur Berechnung</button>
             </div><!-- /footer -->
 
         </div>
@@ -123,7 +119,7 @@
 
 
         <!-- Einbinden der JS-Dateien -->
-        <script src="jquery/jquery-3.2.1.min.js"></script>
+        <script src="jquery/jquery-1.11.1.min.js"></script>
         <script src="jquery/jquery.mobile-1.4.5.min.js"></script>
         <script src="js/javascript.js"></script>
     </body>
