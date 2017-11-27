@@ -16,7 +16,8 @@
         <div data-role="page" id="page1" class="active">
 
             <div data-role="header">
-                <h1>Inputdaten</h1>
+                <h1>Eingaben</h1>
+                <button class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all" onclick="functionPage3()">Hinweis zur Nutzung</button>
             </div><!-- /header -->
     
             <div role="main" class="ui-content">
@@ -26,7 +27,6 @@
                     </label>
                     <br>
                     <label for="Wert2">Eindruck:
-                        <br>
                         <form>
                             <input type="range" name="slider-fill" data-highlight="true" id="p" min="0.0" max="1" value="0" step="0.1">
                         </form>
@@ -44,11 +44,6 @@
                         <input id="t" data-clear-btn="true" name="w3"> in Monate
                     </label>
                     <br>
-                    <!--
-                    <label for="Wert6">Alkohlkonsum: 
-                        <input id="a" name="w3">
-                    </label>
-                    -->
                     <label for="Wert6">Alkohlkonsum: 
                         <select id="alkohol">
                             <option value="null"></option>
@@ -64,9 +59,7 @@
             </div><!-- /content -->
     
             <div data-role="footer">
-                <h4>Buttons</h4>
-                <button id="buttonpage1" onclick="functionPage2()">Berechnen</button>
-                <button id="buttonpage1" onclick="functionPage3()">Hinweis zur Nutzung</button>
+                <button class="button" onclick="functionPage2()">Berechnen</button>
             </div><!-- /footer -->
     
         </div>
@@ -79,6 +72,7 @@
             
             <div data-role="header">
                 <h1>Ergebnis</h1>
+                <button class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all" onclick="functionPage3()">Hinweis zur Nutzung</button>
             </div><!-- /header -->
 
             <div role="main" class="ui-content">
@@ -86,9 +80,8 @@
             </div><!-- /content -->
 
             <div data-role="footer">
-                <h4>Buttons</h4>
-                <button id="buttonpage1" onclick="functionPage1()">zu den Eingaben</button>
-                <button id="buttonpage1" onclick="functionPage3()">Hinweis zur Nutzung</button>
+                <button class="button" onclick="functionPage1()">zu den Eingaben</button>
+
             </div><!-- /footer -->
 
         </div>
@@ -108,9 +101,8 @@
             </div><!-- /content -->
 
             <div data-role="footer">
-                <h4>Buttons</h4>
-                <button id="buttonpage1" onclick="functionPage1()">Zu den Eingaben</button>
-                <button id="buttonpage1" onclick="functionPage2()">Zur Berechnung</button>
+                <button class="button" onclick="functionPage1()">Zu den Eingaben</button>
+                <button class="button" onclick="functionPage2()">Zur Berechnung</button>
             </div><!-- /footer -->
 
         </div>

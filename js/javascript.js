@@ -53,8 +53,9 @@ function functionPage2() {
     // des Ergebnisses
     var result = q * (12+(3*s/8));
 
+
     // Ergebnis auf die zweite Seite schreiben:
-    document.getElementById('result').innerHTML = result;
+    document.getElementById('result').innerHTML = result.toFixed(1) + ' cm';
 
     // Seiten sichbar / unsichtbar schalten
     var page1 = document.getElementById("page1");
