@@ -16,12 +16,12 @@ function functionPage2() {
 
     // Alle Eingaben holen
     var s = Number.parseInt(document.getElementById("s").value);
-    var p = Number.parseFloat(document.getElementById("p").value);
+    var p = Number.parseFloat(document.getElementById("p").value / 100);
     var y = Number.parseInt(document.getElementById("y").value);
     var l = Number.parseInt(document.getElementById("l").value * kurs);
     var t = Number.parseInt(document.getElementById("t").value);
     var a = Number.parseInt(document.getElementById("alkohol").value);
-
+    
     //Umrechnen von EU Größe auf UK
     s = (s/1.27) - 25;
 

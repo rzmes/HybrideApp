@@ -26,3 +26,11 @@ div[data-role="footer"] {
     margin-left: 5px;
     margin-right: 5px;
 }
+
+/* Hide the number input */
+.full-width-slider input {
+        display: none;
+    }
+.full-width-slider .ui-slider-track {
+    margin-left: 15px;
+}
