@@ -1,5 +1,5 @@
 function functionPage1() {
-    // Seiten sichbar / unsichtbar schalten
+    // Seitenwechsel auf Seite 1
     $("body").pagecontainer("change", "#page1", {
         transition: 'slide',
         changeHash: false,
@@ -12,14 +12,26 @@ function functionPage2() {
     // Umrechnungskurs 1€ = xx Pfund
     var kurs = 0.89;
 
+    /*
     // Alle Eingaben holen
+
+    //mit JavaScript, sollen wir aber nicht verwenden
     var s = Number.parseInt(document.getElementById("s").value);
     var p = Number.parseFloat(document.getElementById("p").value / 100);
     var y = Number.parseInt(document.getElementById("y").value);
     var l = Number.parseInt(document.getElementById("l").value * kurs);
     var t = Number.parseInt(document.getElementById("t").value);
     var a = Number.parseInt(document.getElementById("alkohol").value);
-    
+    */
+
+    // mit jQuery
+    var s = Number.parseInt($("#s").val());
+    var p = Number.parseFloat($("#p").val() / 100);
+    var y = Number.parseInt($("#y").val());
+    var l = Number.parseInt($("#l").val() * kurs);
+    var t = Number.parseInt($("#t").val());
+    var a = Number.parseInt($("#alkohol").val());
+
     //Umrechnen von EU Größe auf UK
     s = (s/1.27) - 25;
 
@@ -53,9 +65,12 @@ function functionPage2() {
 
 
     // Ergebnis auf die zweite Seite schreiben:
-    document.getElementById('result').innerHTML = result.toFixed(1) + ' cm';
+    //JavaScript
+    //document.getElementById('result').innerHTML = result.toFixed(1) + ' cm';
+    //jQuery
+    $("#result").text( result.toFixed(1) + ' cm');
 
-    // Seiten sichbar / unsichtbar schalten
+    // Seiten sichbar / unsichtbar schalten (eigene Lösung - nicht verwenden!)
     /*
     var page1 = document.getElementById("page1");
     page1.className = "";
@@ -66,6 +81,7 @@ function functionPage2() {
     var page3 = document.getElementById("page3");
     page3.className = "";
     */
+    // Seitenwechsel auf Seite 2
     $("body").pagecontainer("change", "#page2", {
         transition: 'slide',
         changeHash: false,
@@ -75,11 +91,15 @@ function functionPage2() {
 }
 
 function functionPage3() {
-    // Seiten sichbar / unsichtbar schalten
+    // Seitenwechsel auf Seite 3
     $("body").pagecontainer("change", "#page3", {
         transition: 'flip',
         changeHash: false,
         reverse: false,
         showLoadMsg: true
     });
+}
+
+function functionDelete() {
+    location.reload();
 }

@@ -4,7 +4,7 @@ body {
   }  
 
 /*
-Seiten initial unsichtbar machen und auch den Platz freigeben
+Seiten initial unsichtbar machen und auch den Platz freigeben (eigene Lösung - nicht verwenden!)
 div[data-role="page"] {
     display: none;
     visibility: hidden;
@@ -35,4 +35,9 @@ div[data-role="footer"] {
     }
 .full-width-slider .ui-slider-track {
     margin-left: 15px;
+}
+
+/*Rechtsbündig */
+.rightalign {
+    float: right;
 }
