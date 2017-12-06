@@ -3,17 +3,19 @@ body {
     font-family: 'Roboto';
   }  
 
-/* Seiten initial unsichtbar machen und auch den Platz freigeben */
+/*
+Seiten initial unsichtbar machen und auch den Platz freigeben
 div[data-role="page"] {
     display: none;
     visibility: hidden;
 }
 
-/* Seite sichtbar machen */
+Seite sichtbar machen
 div[data-role="page"].active {
     display: block;
     visibility: visible;
 }
+*/
 
 /* Footer mittig ausrichten */
 div[data-role="footer"] {

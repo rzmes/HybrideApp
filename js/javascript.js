@@ -1,13 +1,11 @@
 function functionPage1() {
     // Seiten sichbar / unsichtbar schalten
-    var page1 = document.getElementById("page1");
-    page1.className = "active";
-
-    var page2 = document.getElementById("page2");
-    page2.className = "";
-
-    var page3 = document.getElementById("page3");
-    page3.className = "";
+    $("body").pagecontainer("change", "#page1", {
+        transition: 'slide',
+        changeHash: false,
+        reverse: true,
+        showLoadMsg: true
+    });
 }
 
 function functionPage2() {
@@ -58,18 +56,7 @@ function functionPage2() {
     document.getElementById('result').innerHTML = result.toFixed(1) + ' cm';
 
     // Seiten sichbar / unsichtbar schalten
-    var page1 = document.getElementById("page1");
-    page1.className = "";
-
-    var page2 = document.getElementById("page2");
-    page2.className = "active";
-
-    var page3 = document.getElementById("page3");
-    page3.className = "";
-}
-
-function functionPage3() {
-    // Seiten sichbar / unsichtbar schalten
+    /*
     var page1 = document.getElementById("page1");
     page1.className = "";
 
@@ -77,5 +64,22 @@ function functionPage3() {
     page2.className = "";
 
     var page3 = document.getElementById("page3");
-    page3.className = "active";
+    page3.className = "";
+    */
+    $("body").pagecontainer("change", "#page2", {
+        transition: 'slide',
+        changeHash: false,
+        reverse: false,
+        showLoadMsg: true
+    });
+}
+
+function functionPage3() {
+    // Seiten sichbar / unsichtbar schalten
+    $("body").pagecontainer("change", "#page3", {
+        transition: 'flip',
+        changeHash: false,
+        reverse: false,
+        showLoadMsg: true
+    });
 }
