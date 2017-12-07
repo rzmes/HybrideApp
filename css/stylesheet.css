@@ -1,21 +1,18 @@
 /* Schriftart */
 body {
     font-family: 'Roboto';
-  }  
+  }
 
-/*
-Seiten initial unsichtbar machen und auch den Platz freigeben (eigene Lösung - nicht verwenden!)
-div[data-role="page"] {
-    display: none;
-    visibility: hidden;
-}
-
-Seite sichtbar machen
-div[data-role="page"].active {
+/* Einstellungen zum Logo */
+#logo {
+    width:50%;
+    height: auto;
     display: block;
-    visibility: visible;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%
 }
-*/
 
 /* Footer mittig ausrichten */
 div[data-role="footer"] {

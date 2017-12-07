@@ -1,3 +1,13 @@
+function functionPage0() {
+    // Seitenwechsel auf Seite 1
+    $("body").pagecontainer("change", "#page1", {
+        transition: 'flip',
+        changeHash: false,
+        reverse: false,
+        showLoadMsg: true
+    });
+}
+
 function functionPage1() {
     // Seitenwechsel auf Seite 1
     $("body").pagecontainer("change", "#page1", {
@@ -39,28 +49,6 @@ function functionPage2() {
         }
 
         else {
-            // Überprüfung ob die Eingaben korrekt sind
-            if (isNaN(s)) {
-                s = 0;
-            };
-            if (isNaN(p)) {
-                p = 0;
-            };
-            if (isNaN(y)) {
-                y = 0;
-            };
-            if (isNaN(l)) {
-                l = 0;
-            };
-            if (isNaN(t)) {
-                t = 0;
-            };
-            if (isNaN(a)) {
-                a = 0;
-            };
-
-            //Auswerten, welcher Wert bei der Combobox gewählt wurde
-
             // Berechnung:
             // von q
             var q = (p*(y+9)*l)/(((t+1)+(a+1)+(y+10))*(l+20));
@@ -74,19 +62,7 @@ function functionPage2() {
             //jQuery
             $("#result").text( result.toFixed(1) + ' cm');
 
-            // Seiten sichbar / unsichtbar schalten (eigene Lösung - nicht verwenden!)
-            /*
-            var page1 = document.getElementById("page1");
-            page1.className = "";
-
-            var page2 = document.getElementById("page2");
-            page2.className = "";
-
-            var page3 = document.getElementById("page3");
-            page3.className = "";
-            */
-            // Seitenwechsel auf Seite 2
-
+            //Seitenwechsel
             $("body").pagecontainer("change", "#page2", {
                 transition: 'slide',
                 changeHash: false,
@@ -109,5 +85,16 @@ function functionPage3() {
 }
 
 function functionDelete() {
-    location.reload();
+    //GEHT NOCH NICHT
+    /*
+    $.mobile.changePage(
+        window.location.href,
+        {
+          allowSamePageTransition : true,
+          transition              : 'none',
+          showLoadMsg             : false,
+          reloadPage              : true
+        }
+      );
+      */
 }
