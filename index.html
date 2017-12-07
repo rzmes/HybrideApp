@@ -48,7 +48,7 @@
                     </label>
                     <br>
                     <label for="Wert6">Alkohlkonsum: 
-                        <select id="alkohol">
+                        <select id="a">
                             <option value="null"></option>
                             <option value="0">Alko...was?!</option>
                             <option value="20">Ich muss leider noch fahren</option>
@@ -59,12 +59,21 @@
                         </select>
                     </label>
                 </form>
+
             </div><!-- /content -->
     
             <div data-role="footer">
                 <button class="button" onclick="functionPage2()">Berechnen</button>
                 <button class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all rightalign" onclick="functionDelete()">Eingaben löschen</button>
             </div><!-- /footer -->
+
+            <div data-role="popup" id="puf" data-position-to="window" data-transition="turn">
+                <p>Manche Eingaben sind nicht korrekt</p>
+            </div>
+
+            <div data-role="popup" id="puv" data-position-to="window" data-transition="turn">
+                <p>Es wurden nicht alle Angaben gemacht</p>
+            </div>
     
         </div>
         <!-- Ende /Seite 1 -->
@@ -87,6 +96,8 @@
                 <button class="button" onclick="functionPage1()">zu den Eingaben</button>
 
             </div><!-- /footer -->
+
+            <div data-role="popup" id="p" data-position-to="window" data-transition="turn"><p>This is a completely basic popup, no options set.</p></div>
 
         </div>
         <!-- Ende /Seite 2 -->
@@ -111,8 +122,6 @@
 
         </div>
         <!-- Ende /Seite 3 -->
-
-
 
         <!-- Einbinden der JS-Dateien -->
         <script src="jquery/jquery-1.11.1.min.js"></script>

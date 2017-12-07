@@ -12,82 +12,90 @@ function functionPage2() {
     // Umrechnungskurs 1€ = xx Pfund
     var kurs = 0.89;
 
-    /*
-    // Alle Eingaben holen
+    // Alle Eingaben holen (mit jQuery)
+    var s = $("#s").val();
+    var p = $("#p").val();
+    var y = $("#y").val();
+    var l = $("#l").val();
+    var t = $("#t").val();
+    var a = $("#a").val();
 
-    //mit JavaScript, sollen wir aber nicht verwenden
-    var s = Number.parseInt(document.getElementById("s").value);
-    var p = Number.parseFloat(document.getElementById("p").value / 100);
-    var y = Number.parseInt(document.getElementById("y").value);
-    var l = Number.parseInt(document.getElementById("l").value * kurs);
-    var t = Number.parseInt(document.getElementById("t").value);
-    var a = Number.parseInt(document.getElementById("alkohol").value);
-    */
+    if (!s || !y || !l || !t || a=="null") {
+        $("#puv").popup("open");
+    }
 
-    // mit jQuery
-    var s = Number.parseInt($("#s").val());
-    var p = Number.parseFloat($("#p").val() / 100);
-    var y = Number.parseInt($("#y").val());
-    var l = Number.parseInt($("#l").val() * kurs);
-    var t = Number.parseInt($("#t").val());
-    var a = Number.parseInt($("#alkohol").val());
+    else {
 
-    //Umrechnen von EU Größe auf UK
-    s = (s/1.27) - 25;
+        //s: Umrechnen von EU auf UK Größe; p: Umrechnen auf 0. Stelle; l: Umrechnugn von € zu Pfund
+        var s = Number.parseInt((s/1.27) - 25);
+        var p = Number.parseFloat(p / 100);
+        var y = Number.parseInt(y);
+        var l = Number.parseInt(l * kurs);
+        var t = Number.parseInt(t);
+        var a = Number.parseInt(a);
 
-    // Überprüfung ob die Eingaben korrekt sind
-    if (isNaN(s)) {
-        s = 0;
-    };
-    if (isNaN(p)) {
-        p = 0;
-    };
-    if (isNaN(y)) {
-        y = 0;
-    };
-    if (isNaN(l)) {
-        l = 0;
-    };
-    if (isNaN(t)) {
-        t = 0;
-    };
-    if (isNaN(a)) {
-        a = 0;
-    };
+        if (s < 2 || s > 11) {
+            $("#puf").popup("open");
+        }
 
-    //Auswerten, welcher Wert bei der Combobox gewählt wurde
+        else {
+            // Überprüfung ob die Eingaben korrekt sind
+            if (isNaN(s)) {
+                s = 0;
+            };
+            if (isNaN(p)) {
+                p = 0;
+            };
+            if (isNaN(y)) {
+                y = 0;
+            };
+            if (isNaN(l)) {
+                l = 0;
+            };
+            if (isNaN(t)) {
+                t = 0;
+            };
+            if (isNaN(a)) {
+                a = 0;
+            };
 
-    // Berechnung:
-    // von q
-    var q = (p*(y+9)*l)/(((t+1)+(a+1)+(y+10))*(l+20));
-    // des Ergebnisses
-    var result = q * (12+(3*s/8));
+            //Auswerten, welcher Wert bei der Combobox gewählt wurde
+
+            // Berechnung:
+            // von q
+            var q = (p*(y+9)*l)/(((t+1)+(a+1)+(y+10))*(l+20));
+            // des Ergebnisses
+            var result = q * (12+(3*s/8));
 
 
-    // Ergebnis auf die zweite Seite schreiben:
-    //JavaScript
-    //document.getElementById('result').innerHTML = result.toFixed(1) + ' cm';
-    //jQuery
-    $("#result").text( result.toFixed(1) + ' cm');
+            // Ergebnis auf die zweite Seite schreiben:
+            //JavaScript
+            //document.getElementById('result').innerHTML = result.toFixed(1) + ' cm';
+            //jQuery
+            $("#result").text( result.toFixed(1) + ' cm');
 
-    // Seiten sichbar / unsichtbar schalten (eigene Lösung - nicht verwenden!)
-    /*
-    var page1 = document.getElementById("page1");
-    page1.className = "";
+            // Seiten sichbar / unsichtbar schalten (eigene Lösung - nicht verwenden!)
+            /*
+            var page1 = document.getElementById("page1");
+            page1.className = "";
 
-    var page2 = document.getElementById("page2");
-    page2.className = "";
+            var page2 = document.getElementById("page2");
+            page2.className = "";
 
-    var page3 = document.getElementById("page3");
-    page3.className = "";
-    */
-    // Seitenwechsel auf Seite 2
-    $("body").pagecontainer("change", "#page2", {
-        transition: 'slide',
-        changeHash: false,
-        reverse: false,
-        showLoadMsg: true
-    });
+            var page3 = document.getElementById("page3");
+            page3.className = "";
+            */
+            // Seitenwechsel auf Seite 2
+
+            $("body").pagecontainer("change", "#page2", {
+                transition: 'slide',
+                changeHash: false,
+                reverse: false,
+                showLoadMsg: true
+            });
+        }
+    }
+
 }
 
 function functionPage3() {
