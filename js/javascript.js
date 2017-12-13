@@ -55,12 +55,30 @@ function functionPage2() {
             // des Ergebnisses und Umrechnung in Inch
             var result = (q * (12+(3*s/8))) * 2.54;
 
+            //Richtiges Bild auswählen:
+            if(result > 10) {
+                var imagefilename = 'images/result_versionen/xl.png';
+            } else if (result > 7.5 && result < 10) {
+                var imagefilename = 'images/result_versionen/l.png';
+            } else if (result > 5 && result < 7.5) {
+                var imagefilename = 'images/result_versionen/m.png';
+            } else if (result > 2.5 && result < 5) {
+                var imagefilename = 'images/result_versionen/s.png';
+            } else if (result > 0 && result < 2.5) {
+                var imagefilename = 'images/result_versionen/xs.png';
+            } else {
+                var imagefilename = 'images/result_versionen/zero.png';
+            }
 
             // Ergebnis auf die zweite Seite schreiben:
             //JavaScript
             //document.getElementById('result').innerHTML = result.toFixed(1) + ' cm';
             //jQuery
             $("#result").text( result.toFixed(1) + ' cm');
+            // Bild einfügen:
+            $('#schuhversion').attr('src', imagefilename);
+
+
 
             //Seitenwechsel
             $("body").pagecontainer("change", "#page2", {

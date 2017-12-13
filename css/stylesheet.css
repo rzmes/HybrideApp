@@ -38,3 +38,19 @@ div[data-role="footer"] {
 .rightalign {
     float: right;
 }
+
+/* Formatierung der Ergebnisseite */
+#result {
+    text-align: center;
+    font-weight: bold;
+}
+
+#schuhversion {
+    width:50%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%
+}
