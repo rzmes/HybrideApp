@@ -44,7 +44,7 @@ function functionPage2() {
         var t = Number.parseInt(t);
         var a = Number.parseInt(a);
 
-        if (s < 2 || s > 11) {
+        if (s < 2 || s > 11 || y < 0 || y > 70 || l < 0 || l > 2500000 || t < 0 || t > 60) {
             $("#puf").popup("open");
         }
 
@@ -52,8 +52,8 @@ function functionPage2() {
             // Berechnung:
             // von q
             var q = (p*(y+9)*l)/(((t+1)+(a+1)+(y+10))*(l+20));
-            // des Ergebnisses
-            var result = q * (12+(3*s/8));
+            // des Ergebnisses und Umrechnung in Inch
+            var result = (q * (12+(3*s/8))) * 2.54;
 
 
             // Ergebnis auf die zweite Seite schreiben:
