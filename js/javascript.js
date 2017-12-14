@@ -23,26 +23,26 @@ function functionPage2() {
     var kurs = 0.89;
 
     // Alle Eingaben holen (mit jQuery)
-    var s = $("#s").val();
-    var p = $("#p").val();
-    var y = $("#y").val();
-    var l = $("#l").val();
-    var t = $("#t").val();
-    var a = $("#a").val();
+    var so = $("#s").val();
+    var po = $("#p").val();
+    var yo = $("#y").val();
+    var lo = $("#l").val();
+    var to = $("#t").val();
+    var ao = $("#a").val();
 
-    if (!s || !y || !l || !t || a=="null") {
+    if (!so || !yo || !lo || !to || ao=="null") {
         $("#puv").popup("open");
     }
 
     else {
 
         //s: Umrechnen von EU auf UK Größe; p: Umrechnen auf 0. Stelle; l: Umrechnugn von € zu Pfund
-        var s = Number.parseInt((s/1.27) - 25);
-        var p = Number.parseFloat(p / 100);
-        var y = Number.parseInt(y);
-        var l = Number.parseInt(l * kurs);
-        var t = Number.parseInt(t);
-        var a = Number.parseInt(a);
+        var s = Number.parseInt((so/1.27) - 25);
+        var p = Number.parseFloat(po / 100);
+        var y = Number.parseInt(yo);
+        var l = Number.parseInt(lo * kurs);
+        var t = Number.parseInt(to);
+        var a = Number.parseInt(ao);
 
         if (s < 2 || s > 11 || y < 0 || y > 70 || l < 0 || l > 2500000 || t < 0 || t > 60) {
             $("#puf").popup("open");
@@ -77,8 +77,8 @@ function functionPage2() {
             $("#result").text( result.toFixed(1) + ' cm');
             // Bild einfügen:
             $('#schuhversion').attr('src', imagefilename);
-
-
+            //Werte einblenden
+            $("#eingaben").text('Eingaben: Schuhgröße: ' + so + ' | Eindruck: ' + po + '% | Erfahrung: ' +  yo + ' | Kaufpreis: ' + lo + ' | Modisch: ' + to + ' | Alkoholkonsum: ' + ao);
 
             //Seitenwechsel
             $("body").pagecontainer("change", "#page2", {

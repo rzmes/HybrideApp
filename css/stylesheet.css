@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Roboto;
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
 /* Schriftart */
 body {
     font-family: 'Roboto';
