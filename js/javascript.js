@@ -104,15 +104,10 @@ function functionPage3() {
 
 function functionDelete() {
     //GEHT NOCH NICHT
-    /*
-    $.mobile.changePage(
-        window.location.href,
-        {
-          allowSamePageTransition : true,
-          transition              : 'none',
-          showLoadMsg             : false,
-          reloadPage              : true
-        }
-      );
-      */
+    $( "#s" ).val("");
+    $( "#p" ).slider( "refresh" );
+    $( "#y" ).val("");
+    $( "#l" ).val("");
+    $( "#t" ).val("");
+    $( "#a" ).selectmenu( "refresh" );
 }
