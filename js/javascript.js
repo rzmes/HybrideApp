@@ -103,11 +103,13 @@ function functionPage3() {
 }
 
 function functionDelete() {
-    //GEHT NOCH NICHT
+    //$("#del").popup("open"); (Fragen ob wirklich alles gelöscht werden soll)
     $( "#s" ).val("");
+    $( "#p" ).val("");
     $( "#p" ).slider( "refresh" );
     $( "#y" ).val("");
     $( "#l" ).val("");
     $( "#t" ).val("");
+    $( "#a" ).val("");
     $( "#a" ).selectmenu( "refresh" );
 }
