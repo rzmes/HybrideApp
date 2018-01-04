@@ -1,185 +1,27 @@
 <!doctype html>
 <html>
     <head>
-        <title>Absatzrechner</title>
-        <!-- Parameter festlegt -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="utf-8">  
-        <!-- Favicon einbinden -->
-        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
-
-        <!-- Einbinden der CSS Dateien -->
-        <link rel="stylesheet" href="jquery/jquery.mobile-1.4.5.min.css">
-        <link rel="stylesheet" href="css/stylesheet.css">
+            <title>Startseite</title>
+            <!-- Parameter festlegt -->
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta charset="utf-8">  
+            <!-- Favicon einbinden -->
+            <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+    
+            <!-- Einbinden der CSS Dateien -->
+            <link rel="stylesheet" href="jquery/jquery.mobile-1.4.5.min.css">
+            <link rel="stylesheet" href="css/stylesheet.css">            
     </head>
-
-    <body>
-        <!-- Start /Startseite -->
-        <div data-role="page" id="page0">
-            
-            <div data-role="header">
-                <h1>Smart heel</h1>
-                <button class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all" onclick="functionPage3()">Hinweis zur Nutzung</button>
-            </div><!-- /header -->
-
-            <div role="main" class="ui-content">
+    <body onload="autoload">
+        <div class="ui-overlay-shadow">
+            <h1 id="preload"> SMART <span id="namefarbe">- heel</span></h1>
+        </div>
+        <div class="ui-content" >
+            <a href="berechnung.html" id="myLink">
                 <img src="images/Logo.png" alt="Logo" id="logo">
-            </div><!-- /content -->
-
-            <div data-role="footer">
-                <button class="button" onclick="functionPage0()">Starten</button>
-
-            </div><!-- /footer -->
-
-        </div>
-        <!-- Ende /Startseite -->
-
-
-
-        <!-- Start /Seite 1 -->
-        <div data-role="page" id="page1">
-
-            <div data-role="header">
-                <h1>Eingaben</h1>
-                <button class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all" onclick="functionPage3()">Hinweis zur Nutzung</button>
-            </div><!-- /header -->
-    
-            <div role="main" class="ui-content">
-                
-                    <label for="s">Schuhgröße:
-                        <input type="text" data-clear-btn="true" id="s" name="w1">
-                    </label>
-                    <br>
-                    <form class="full-width-slider">
-                        <label for="p" class="ui-hidden-accessible">Eindruck:</label>
-                            <input type="range" name="p" data-highlight="true" id="p" min="0" max="100" value="0">
-                    </form>    
-                    
-                    <br>
-                    <label for="y">Lauferfahrung: 
-                        <input id="y" data-clear-btn="true" name="w3"> in Jahre
-                    </label>
-                    <br>
-                    <label for="l">Kaufpreis: 
-                        <input id="l" data-clear-btn="true" name="w3"> in €
-                    </label>
-                    <br>
-                    <label for="t">Wie lange modisch? 
-                        <input id="t" data-clear-btn="true" name="w3"> in Monate
-                    </label>
-                    <br>
-                    <label for="a">Alkohlkonsum: 
-                        <select id="a">
-                            <option value="null">Bitte wählen</option>
-                            <option value="0">Alko...was?!</option>
-                            <option value="20">Ich muss leider noch fahren</option>
-                            <option value="40">Ein Prosecco geht immer!</option>
-                            <option value="60">Aperol Spritz geht immer!</option>
-                            <option value="80">Ich trink sie alle schön!</option>
-                            <option value="100">Ich baller mir die Scheuerleiste weg!</option>
-                        </select>
-                    </label>
-                
-
-            </div><!-- /content -->
-    
-            <div data-role="footer">
-                <button class="button" onclick="functionPage2()">Berechnen</button>
-                <button class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all rightalign" onclick="functionDelete()">Eingaben löschen</button>
-            </div><!-- /footer -->
-
-            <div data-role="popup" id="puf" data-position-to="window" data-transition="turn">
-                <p>Manche Eingaben sind nicht korrekt</p>
+            </a>
             </div>
-
-            <div data-role="popup" id="puv" data-position-to="window" data-transition="turn">
-                <p>Es wurden nicht alle Angaben gemacht</p>
-            </div>
-
-            <!--
-
-            <div data-role="popup" id="del" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
-                <div data-role="header" data-theme="a">
-                <h1>Eingaben löschen?</h1>
-                </div>
-                <div role="main" class="ui-content">
-                    <h3 class="ui-title">Bist du dir sicher, dass du alle Eingaben löschen möchtest?</h3>
-                <p>Die Aktion kann nicht rückgängig gemacht werden.</p>
-            
-                    <a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Zurück</a>
-                    <a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Löschen</a>
-                </div>
-            </div>
-
-            -->
-    
         </div>
-        <!-- Ende /Seite 1 -->
-
-
-
-        <!-- Start /Seite 2 -->
-        <div data-role="page" id="page2">
-            
-            <div data-role="header">
-                <h1>Ergebnis</h1>
-                <button class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all" onclick="functionPage3()">Hinweis zur Nutzung</button>
-            </div><!-- /header -->
-
-            <div role="main" class="ui-content">
-                <p id='result'></p>
-                <div id='imageresult'>
-                    <img id='schuhversion' title="schuhversionen" src="images/result_versionen/zero.png" alt="images/result_versionen/zero.png" />
-                </div>
-                <p id="eingaben">
-                    
-                </p>
-            </div><!-- /content -->
-
-            <div data-role="footer">
-                <button class="button" onclick="functionPage1()">zu den Eingaben</button>
-
-            </div><!-- /footer -->
-
-        </div>
-        <!-- Ende /Seite 2 -->
-
-
-
-        <!-- Start /Seite 3 -->
-        <div data-role="page" id="page3">
-        
-            <div data-role="header">
-                <h1>Smart heel - Sicher auf Schritt und Tritt</h1>
-            </div><!-- /header -->
-
-            <div role="main" class="ui-content">
-                
-                    <p>Physiker einer britischen Universität haben vor einigen Jahren eine Formel entwickelt, 
-                        die die Wahrscheinlichkeit von Sturz, Verletzung und Umknicken mit hohen Absätzen minimiert.</p>
-
-                    <p><i>Smart heel</i> setzt diese Formel ein, um Ihren Alltag sicher auf Schritt und Tritt zu gestalten.<br>
-                        Mit <i>Smart heel</i> können Sie für jede Situation ihre optimale Absatzhöhe bestimmen.</p>
-                    
-                    <p>Die Absatzhöhe ist anhängig von verschiedenen individuellen und situationsbezogenen Parametern.<br> 
-                        In die Berechnung fließen Ihre Schuhgröße, Ihr Level in dem Sie bei Ihren Mitmenschen Eindruck schinden möchten, 
-                        Ihre Lauferfahrung mit hohen Absätzen, der Kaufpreis der Schuhe, die Sie planen zu tragen 
-                        und wie lange diese bereits modisch sind sowie der situationsbezogene geplante Alkoholkonsum.</p>
-                   
-                
-            </div><!-- /content -->
-
-            <div data-role="footer">
-                <button class="button" onclick="functionPage1()">Zu den Eingaben</button>
-                <button class="button" onclick="functionPage2()">Zur Berechnung</button>
-            </div><!-- /footer -->
-
-        </div>
-        <!-- Ende /Seite 3 -->
-
-        <!-- Einbinden der JS-Dateien -->
-        <script src="jquery/jquery-1.11.1.min.js"></script>
-        <script src="jquery/jquery.mobile-1.4.5.min.js"></script>
         <script src="js/javascript.js"></script>
     </body>
 </html>

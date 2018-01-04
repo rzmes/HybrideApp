@@ -113,3 +113,9 @@ function functionDelete() {
     $( "#a" ).val("");
     $( "#a" ).selectmenu( "refresh" );
 }
+
+function autoload(){
+        setTimeout(function() {
+            window.location.href('/berechnung.html/');
+        }, 2000);
+}
