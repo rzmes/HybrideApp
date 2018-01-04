@@ -115,7 +115,5 @@ function functionDelete() {
 }
 
 function autoload(){
-        setTimeout(function() {
-            window.location.href('/berechnung.html/');
-        }, 2000);
+    window.setTimeout('window.location="berechnung.html" ',2500);
 }
