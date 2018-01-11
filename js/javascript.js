@@ -103,7 +103,11 @@ function functionPage3() {
 }
 
 function functionDelete() {
-    //$("#del").popup("open"); (Fragen ob wirklich alles gelöscht werden soll)
+    $("#del").popup("open");
+
+}
+
+function functionDelete_all() {
     $( "#s" ).val("");
     $( "#p" ).val("");
     $( "#p" ).slider( "refresh" );
@@ -115,5 +119,5 @@ function functionDelete() {
 }
 
 function autoload(){
-    window.setTimeout('window.location="berechnung.html" ',2500);
+    window.setTimeout('window.location="berechnung.html" ', 2500);
 }

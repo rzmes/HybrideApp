@@ -61,10 +61,15 @@ margin-left: 15px;
     margin-bottom: 5%
 }
 
-#preload{
+#preload {
     align-items: center;
     text-align: center;
 }
+
+.put {
+    text-align: center;
+}
+
 #namefarbe{
     color:red;
 
