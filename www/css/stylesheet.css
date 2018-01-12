@@ -1,0 +1,105 @@
+@font-face {
+    font-family: Roboto;
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+/* Schriftart */
+body {
+    font-family: 'Roboto';
+  }
+
+/* Einstellungen zum Logo */
+#logo {
+    width:60%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%
+}
+
+/* Footer mittig ausrichten */
+div[data-role="footer"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+div[data-role="header"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.button {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* Hide the number input */
+.full-width-slider input {
+display: none;
+}
+
+.full-width-slider .ui-slider-track {
+margin-left: 15px;
+}
+
+/*Rechtsbündig */
+.rightalign {
+    float: right;
+}
+
+/* Formatierung der Ergebnisseite */
+#result {
+    text-align: center;
+    font-weight: bold;
+}
+
+#schuhversion {
+    width:50%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%
+}
+
+#preload {
+    align-items: center;
+    text-align: center;
+}
+
+.put {
+    text-align: center;
+}
+
+#namefarbe{
+    color:red;
+
+}
+
+.zentriert2 {
+    position: absolute;
+    top: 50%;
+    width: 98%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    }
+
+.zentriert {
+    margin-top: 43px;
+}
