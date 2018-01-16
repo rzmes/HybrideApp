@@ -116,7 +116,7 @@ function functionPage3() {
 }
 
 function functionDelete() {
-    if ((s.val() == "") && (p.val() == "0") && (y.val() == "") && (l.val() == "") && (t.val() == "") && (a.val() == "")){
+    if (($("#s").val() == "") && ($("#p").val() == "0") && ($("#y").val() == "") && ($("#l").val() == "") && ($("#t").val() == "") && ($("#a").val() == "")){
         $("#del_empty").popup("open");
     }
     else{
