@@ -21,11 +21,13 @@
                 <h1>Eingaben</h1>
                 <button class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all" onclick="functionPage3()">Hinweis zur Nutzung</button>
             </div><!-- /header -->
+
+            <!-- hier ist jeweils der input type number optimiert für smartphones -->
     
-            <div role="main" class="ui-content">
+            <div role="main" class="ui-content abstandoben">
                 
                     <label for="s">Schuhgröße:
-                        <input type="text" data-clear-btn="true" id="s" name="w1">
+                        <input type="number" data-clear-btn="true" id="s" name="w1">
                     </label>
                     <br>
 
@@ -36,15 +38,15 @@
                     
                     <br>
                     <label for="y">Lauferfahrung: 
-                        <input id="y" data-clear-btn="true" name="w3"> in Jahre
+                        <input type="number" input id="y" data-clear-btn="true" name="w3"> in Jahre
                     </label>
                     <br>
                     <label for="l">Kaufpreis: 
-                        <input id="l" data-clear-btn="true" name="w3"> in €
+                        <input type="number" input id="l" data-clear-btn="true" name="w3"> in €
                     </label>
                     <br>
                     <label for="t">Wie lange modisch? 
-                        <input id="t" data-clear-btn="true" name="w3"> in Monate
+                        <input type="number" input id="t" data-clear-btn="true" name="w3"> in Monate
                     </label>
                     <br>
                     <label for="a">Alkohlkonsum: 
@@ -62,7 +64,7 @@
 
             </div><!-- /content -->
     
-            <div data-role="footer">
+            <div data-role="footer" class="footerpos">
                 <button class="button" onclick="functionPage2()">Berechnen</button>
                 <button class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all rightalign" onclick="functionDelete()">Eingaben löschen</button>
             </div><!-- /footer -->
@@ -106,8 +108,8 @@
                 <button class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all" onclick="functionPage3()">Hinweis zur Nutzung</button>
             </div><!-- /header -->
 
-            <div role="main" class="ui-content">
-                <p id='result'></p>
+            <div role="main" class="ui-content abstandoben">
+                <div id='result'></div>
                 <div id='imageresult'>
                     <img id='schuhversion' title="schuhversionen" src="images/result_versionen/zero.png" alt="images/result_versionen/zero.png" />
                 </div>
@@ -116,7 +118,7 @@
                 </p>
             </div><!-- /content -->
 
-            <div data-role="footer">
+            <div data-role="footer" class="footerpos">
                 <button class="button" onclick="functionPage1()">zu den Eingaben</button>
 
             </div><!-- /footer -->
@@ -133,7 +135,7 @@
                 <h1>Smart heel - Sicher auf Schritt und Tritt</h1>
             </div><!-- /header -->
 
-            <div role="main" class="ui-content">
+            <div role="main" class="ui-content abstandoben">
                 
                     <p>Physiker einer britischen Universität haben vor einigen Jahren eine Formel entwickelt, 
                         die die Wahrscheinlichkeit von Sturz, Verletzung und Umknicken mit hohen Absätzen minimiert.</p>
@@ -149,9 +151,9 @@
                 
             </div><!-- /content -->
 
-            <div data-role="footer">
-                <button class="button" onclick="functionPage1()">Zu den Eingaben</button>
-                <button class="button" onclick="functionPage2()">Zur Berechnung</button>
+            <div data-role="footer" class="footerpos">
+                <button class="button" id="buttoneingabe_page3" onclick="functionPage1()">Zu den Eingaben</button>
+                <button class="button" id="buttonberechnung_page3" onclick="functionPage2()">Zur Berechnung</button>
             </div><!-- /footer -->
 
         </div>

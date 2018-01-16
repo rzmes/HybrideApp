@@ -1,3 +1,6 @@
+//Globale Variablen
+var check_result;
+
 function functionPage0() {
     // Seitenwechsel auf Seite 1
     $("body").pagecontainer("change", "#page1", {
@@ -23,13 +26,14 @@ function functionPage2() {
     var kurs = 0.89;
 
     // Alle Eingaben holen (mit jQuery)
+    
     var so = $("#s").val();
     var po = $("#p").val();
     var yo = $("#y").val();
     var lo = $("#l").val();
     var to = $("#t").val();
     var ao = $("#a").val();
-
+    debugger;
     if (!so || !yo || !lo || !to || ao=="null") {
         $("#puv").popup("open");
     }
@@ -75,6 +79,10 @@ function functionPage2() {
             //document.getElementById('result').innerHTML = result.toFixed(1) + ' cm';
             //jQuery
             $("#result").text( result.toFixed(1) + ' cm');
+
+            //in globale Variable schreiben um ggf. den Button auszublenden:
+            check_result = result;
+
             // Bild einfügen:
             $('#schuhversion').attr('src', imagefilename);
             //Werte einblenden
@@ -93,6 +101,11 @@ function functionPage2() {
 }
 
 function functionPage3() {
+    //Prüfen welche Buttons eingefügt werden sollen
+    $("#buttonberechnung_page3").show();
+    if(typeof(check_result)=="undefined") {
+        $("#buttonberechnung_page3").hide();
+    }
     // Seitenwechsel auf Seite 3
     $("body").pagecontainer("change", "#page3", {
         transition: 'flip',
@@ -103,8 +116,12 @@ function functionPage3() {
 }
 
 function functionDelete() {
-    $("#del").popup("open");
-
+    if ((s.val() == "") && (p.val() == "0") && (y.val() == "") && (l.val() == "") && (t.val() == "") && (a.val() == "")){
+        $("#del_empty").popup("open");
+    }
+    else{
+        $("#del").popup("open");
+    }
 }
 
 function functionDelete_all() {

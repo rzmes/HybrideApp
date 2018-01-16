@@ -10,7 +10,7 @@ body {
 
 /* Einstellungen zum Logo */
 #logo {
-    width:30%;
+    width:60%;
     height: auto;
     display: block;
     margin-left: auto;
@@ -24,6 +24,22 @@ div[data-role="footer"] {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+div[data-role="header"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
 }
 
 .button {
@@ -49,6 +65,7 @@ margin-left: 15px;
 #result {
     text-align: center;
     font-weight: bold;
+    font-size: 3em;
 }
 
 #schuhversion {
@@ -57,8 +74,8 @@ margin-left: 15px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5%;
-    margin-bottom: 5%
+    margin-top: 20%;
+    margin-bottom: 20%
 }
 
 #preload {
@@ -70,7 +87,19 @@ margin-left: 15px;
     text-align: center;
 }
 
+#eingaben {
+    text-align: center;
+    vertical-align: bottom;
+}
+
 #namefarbe{
     color:red;
+}
 
+.abstandoben {
+    margin-top: 43px;
+}
+
+.abstandunten {
+    margin-bottom: 43px;
 }
