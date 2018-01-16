@@ -103,7 +103,8 @@ function functionPage2() {
 function functionPage3() {
     //Prüfen welche Buttons eingefügt werden sollen
     $("#buttonberechnung_page3").show();
-    if(typeof(check_result)=="undefined") {
+    alert(check_result);
+    if(typeof(check_result)=="undefined" || check_result == "") {
         $("#buttonberechnung_page3").hide();
     }
     // Seitenwechsel auf Seite 3
@@ -133,6 +134,7 @@ function functionDelete_all() {
     $( "#t" ).val("");
     $( "#a" ).val("");
     $( "#a" ).selectmenu( "refresh" );
+    check_result = "";
 }
 
 function autoload(){
