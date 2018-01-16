@@ -103,7 +103,6 @@ function functionPage2() {
 function functionPage3() {
     //Prüfen welche Buttons eingefügt werden sollen
     $("#buttonberechnung_page3").show();
-    alert(check_result);
     if(typeof(check_result)=="undefined" || check_result == "") {
         $("#buttonberechnung_page3").hide();
     }
@@ -126,7 +125,8 @@ function functionDelete() {
 }
 
 function functionDelete_all() {
-    $( "#s" ).val("");
+    //$( "#s" ).val("");
+    $( "#s" ).textinput( "refresh" );
     $( "#p" ).val("");
     $( "#p" ).slider( "refresh" );
     $( "#y" ).val("");
