@@ -125,13 +125,20 @@ function functionDelete() {
 }
 
 function functionDelete_all() {
-    //$( "#s" ).val("");
-    $( "#s" ).textinput( "refresh" );
+    $( "#s" ).val("");
+    $( "#s" ).textinput({clearBtn: false});
+    $( "#s" ).textinput({clearBtn: true});
     $( "#p" ).val("");
     $( "#p" ).slider( "refresh" );
-    $( "#y" ).val("");
+    $( "#y" ).val("");    
+    $( "#y" ).textinput({clearBtn: false});
+    $( "#y" ).textinput({clearBtn: true});
     $( "#l" ).val("");
+    $( "#l" ).textinput({clearBtn: false});
+    $( "#l" ).textinput({clearBtn: true});
     $( "#t" ).val("");
+    $( "#t" ).textinput({clearBtn: false});
+    $( "#t" ).textinput({clearBtn: true});
     $( "#a" ).val("");
     $( "#a" ).selectmenu( "refresh" );
     check_result = "";
