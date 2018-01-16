@@ -22,7 +22,7 @@
                 <button class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all" onclick="functionPage3()">Hinweis zur Nutzung</button>
             </div><!-- /header -->
     
-            <div role="main" class="ui-content zentriert">
+            <div role="main" class="ui-content abstandoben">
                 
                     <label for="s">Schuhgröße:
                         <input type="text" data-clear-btn="true" id="s" name="w1">
@@ -106,8 +106,8 @@
                 <button class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all" onclick="functionPage3()">Hinweis zur Nutzung</button>
             </div><!-- /header -->
 
-            <div role="main" class="ui-content zentriert">
-                <p id='result'></p>
+            <div role="main" class="ui-content abstandoben">
+                <div id='result'></div>
                 <div id='imageresult'>
                     <img id='schuhversion' title="schuhversionen" src="images/result_versionen/zero.png" alt="images/result_versionen/zero.png" />
                 </div>
@@ -133,7 +133,7 @@
                 <h1>Smart heel - Sicher auf Schritt und Tritt</h1>
             </div><!-- /header -->
 
-            <div role="main" class="ui-content zentriert">
+            <div role="main" class="ui-content abstandoben">
                 
                     <p>Physiker einer britischen Universität haben vor einigen Jahren eine Formel entwickelt, 
                         die die Wahrscheinlichkeit von Sturz, Verletzung und Umknicken mit hohen Absätzen minimiert.</p>
@@ -150,8 +150,8 @@
             </div><!-- /content -->
 
             <div data-role="footer" class="footerpos">
-                <button class="button" onclick="functionPage1()">Zu den Eingaben</button>
-                <button class="button" onclick="functionPage2()">Zur Berechnung</button>
+                <button class="button" id="buttoneingabe_page3" onclick="functionPage1()">Zu den Eingaben</button>
+                <button class="button" id="buttonberechnung_page3" onclick="functionPage2()">Zur Berechnung</button>
             </div><!-- /footer -->
 
         </div>
