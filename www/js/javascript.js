@@ -39,8 +39,7 @@ function functionPage2() {
     }
 
     else {
-
-        //s: Umrechnen von EU auf UK Größe; p: Umrechnen auf 0. Stelle; l: Umrechnugn von € zu Pfund
+        //Schuhgröße: Umrechnen von EU auf UK Größe; p: Umrechnen auf 0. Stelle; l: Umrechnugn von € zu Pfund
         var s = Number.parseInt((so/1.27) - 25);
         var p = Number.parseFloat(po / 100);
         var y = Number.parseInt(yo);
@@ -48,6 +47,7 @@ function functionPage2() {
         var t = Number.parseInt(to);
         var a = Number.parseInt(ao);
 
+        // Überprüfen der Eingaben
         if (s < 2 || s > 11 || y < 0 || y > 70 || l < 0 || l > 2500000 || t < 0 || t > 60) {
             $("#puf").popup("open");
         }
@@ -75,9 +75,6 @@ function functionPage2() {
             }
 
             // Ergebnis auf die zweite Seite schreiben:
-            //JavaScript
-            //document.getElementById('result').innerHTML = result.toFixed(1) + ' cm';
-            //jQuery
             $("#result").text( result.toFixed(1) + ' cm');
 
             //in globale Variable schreiben um ggf. den Button auszublenden:
@@ -97,7 +94,6 @@ function functionPage2() {
             });
         }
     }
-
 }
 
 function functionPage3() {
@@ -113,6 +109,16 @@ function functionPage3() {
         reverse: false,
         showLoadMsg: true
     });
+}
+
+function functionPage4() {  
+    window.setTimeout('window.location="spiel.html"',5);
+}
+
+function easteregg() {
+    if ($("#s").val() == '30918') {
+        window.setTimeout('window.location="spiel.html"',5);
+    }
 }
 
 function functionDelete() {
