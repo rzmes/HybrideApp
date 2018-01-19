@@ -21,46 +21,41 @@
                 <h1>Eingaben</h1>
                 <button class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all" onclick="functionPage3()">Hinweis zur Nutzung</button>
             </div><!-- /header -->
-
-            <!-- hier ist jeweils der input type number optimiert für smartphones -->
-    
+ 
             <div role="main" class="ui-content abstandoben abstandunten">
                 
-                    <label for="s">Schuhgröße:
-                        <input type="number" data-clear-btn="true" id="s" name="w1">
-                    </label>
-                    <br>
-
-                    <form class="full-width-slider">
-                        <label for="p">Eindruck:</label>
-                        <input type="range" name="p" data-highlight="true" id="p" min="0" max="100" value="0">
-                    </form>    
-                    
-                    <br>
-                    <label for="y">Lauferfahrung auf High Heels: 
-                        <input type="number" input id="y" data-clear-btn="true" name="w3"> in Jahre
-                    </label>
-                    <br>
-                    <label for="l">Kaufpreis: 
-                        <input type="number" input id="l" data-clear-btn="true" name="w3"> in €
-                    </label>
-                    <br>
-                    <label for="t">Wie lange modisch? 
-                        <input type="number" input id="t" data-clear-btn="true" name="w3"> in Monate
-                    </label>
-                    <br>
-                    <label for="a">Alkoholkonsum: 
-                        <select id="a">
-                            <option value="">Bitte wählen</option>
-                            <option value="0">Alko...was?!</option>
-                            <option value="20">Ich muss leider noch fahren</option>
-                            <option value="40">Ein Prosecco geht immer!</option>
-                            <option value="60">Aperol Spritz geht immer!</option>
-                            <option value="80">Ich trink sie alle schön!</option>
-                            <option value="100">Ich baller mir die Scheuerleiste weg!</option>
-                        </select>
-                    </label>
-                
+                <label for="s">Schuhgröße:
+                    <input type="number" data-clear-btn="true" id="s" name="w1" onkeyup="easteregg()">
+                </label>
+                <br>
+                <form class="full-width-slider">
+                    <label for="p">Eindruck:</label>
+                    <input type="range" name="p" data-highlight="true" id="p" min="0" max="100" value="0">
+                </form>                    
+                <br>
+                <label for="y">Lauferfahrung auf High Heels: 
+                    <input type="number" input id="y" data-clear-btn="true" name="w3"> in Jahre
+                </label>
+                <br>
+                <label for="l">Kaufpreis: 
+                    <input type="number" input id="l" data-clear-btn="true" name="w3"> in €
+                </label>
+                <br>
+                <label for="t">Wie lange modisch? 
+                    <input type="number" input id="t" data-clear-btn="true" name="w3"> in Monate
+                </label>
+                <br>
+                <label for="a">Alkoholkonsum: 
+                    <select id="a">
+                        <option value="">Bitte wählen</option>
+                        <option value="0">Alko...was?!</option>
+                        <option value="20">Ich muss leider noch fahren</option>
+                        <option value="40">Ein Prosecco geht immer!</option>
+                        <option value="60">Aperol Spritz geht immer!</option>
+                        <option value="80">Ich trink sie alle schön!</option>
+                        <option value="100">Ich baller mir die Scheuerleiste weg!</option>
+                    </select>
+                </label>
 
             </div><!-- /content -->
     
@@ -69,12 +64,13 @@
                 <button class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all rightalign" onclick="functionDelete()">Eingaben löschen</button>
             </div><!-- /footer -->
 
+            <!-- Popups -->
             <div data-role="popup" id="puf" data-position-to="window" data-transition="turn">
                 <p>Manche Eingaben sind nicht korrekt</p>
             </div>
 
             <div data-role="popup" id="puv" data-position-to="window" data-transition="turn">
-                <p>Es wurden nicht alle Angaben gemacht</p>
+                <p>Es wurden nicht alle Angaben korrekt eingegeben</p>
             </div>
 
             <div data-role="popup" id="del_empty" data-position-to="window" data-transition="turn">
@@ -94,6 +90,7 @@
                     </div>
                 </div>
             </div>
+            <!-- /Popups -->
     
         </div>
         <!-- Ende /Seite 1 -->
@@ -142,13 +139,12 @@
 
                     <p><i>Smart heel</i> setzt diese Formel ein, um Ihren Alltag sicher auf Schritt und Tritt zu gestalten.<br>
                         Mit <i>Smart heel</i> können Sie für jede Situation ihre optimale Absatzhöhe bestimmen.</p>
-                    
+        
                     <p>Die Absatzhöhe ist anhängig von verschiedenen individuellen und situationsbezogenen Parametern.<br> 
                         In die Berechnung fließen Ihre Schuhgröße, Ihr Level in dem Sie bei Ihren Mitmenschen Eindruck schinden möchten, 
                         Ihre Lauferfahrung mit hohen Absätzen, der Kaufpreis der Schuhe, die Sie planen zu tragen 
                         und wie lange diese bereits modisch sind sowie der situationsbezogene geplante Alkoholkonsum.</p>
-                   
-                
+   
             </div><!-- /content -->
 
             <div data-role="footer" class="footerpos">
@@ -163,5 +159,6 @@
         <script src="jquery/jquery-1.11.1.min.js"></script>
         <script src="jquery/jquery.mobile-1.4.5.min.js"></script>
         <script src="js/javascript.js"></script>
+        <script src="js/game.js"></script>
     </body>
 </html>
