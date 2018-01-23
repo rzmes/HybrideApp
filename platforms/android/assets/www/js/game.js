@@ -7,6 +7,7 @@ function startGame() {
     myGamePiece.gravity = 0.05;
     myScore = new component("30px", "Consolas", "black", 280, 40, "text");
     myGameArea.start();
+	document.getElementById('audiotag1').play();
 }
 
 var myGameArea = {
